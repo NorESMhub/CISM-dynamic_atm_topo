@@ -18,11 +18,11 @@
 #
 ###########################
 
-module load NCO/4.7.9-intel-2018b
+module load NCO/4.9.3-intel-2019b
 
 ## Default settings (may be changed from setup.sh)
 
-ScratchRun=/cluster/projects/nn9560k/heig/topo/test
+ScratchRun=/cluster/work/users/heig/noresm/N1850frc2G_f09_tn14_gl4_SMB1_hg/run
 ScriptDir=$ScratchRun/dynamic_atm_topo
 
 ### ### ### ### ### ### ### ###

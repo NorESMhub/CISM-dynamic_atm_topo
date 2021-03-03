@@ -29,8 +29,9 @@ UNAMEM := $(findstring CRAY,$(shell uname -m))
 
 ifeq ($(UNAMES),Linux)
 ifeq ($(USER_FC),$(null))
-FC := ifort
-FFLAGS = -c -g -r8 -O1 -I$(INC_NETCDF)
+FC := mpiifort
+#FFLAGS = -c -g -r8 -fp-model source -convert big_endian -assume byterecl -ftz -traceback -O2 -assume realloc_lhs -xHost -mkl -heap-arrays -check all -fp-stack-check -I$(INC_NETCDF)
+FFLAGS = -c -g -r8 -fp-model source -convert big_endian -assume byterecl -ftz -traceback -O2 -assume realloc_lhs -xHost -mkl -heap-arrays -I$(INC_NETCDF)
 else
 FC := $(USER_FC)
 endif

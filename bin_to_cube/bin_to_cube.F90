@@ -171,6 +171,7 @@ program convterr
   
   WRITE(*,*) "compute volume for raw data"
   vol = 0.0
+  area_latlon = 0.0
   dx = (lon(2)-lon(1))
   dx_rad = dx*deg2rad
   do j=1,jm

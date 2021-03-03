@@ -1,8 +1,7 @@
 #!/bin/bash
 #SBATCH --job-name=topo_regen
 #SBATCH --account=nn9560k
-#SBATCH --qos=short
-#SBATCH --nodes=1
+#SBATCH --nodes=4
 #SBATCH --time=00:29:00 
 #SBATCH --mail-type=ALL
 #SBATCH --mail-user=heig@norceresearch.no
@@ -54,6 +53,7 @@
 # Heiko Goelzer
 # - adapted for NorESM on fram
 # - work in anomaly mode topo = topo_ref + (topo_mod - topo_mod0)
+# - adapted for NorESM on betzy
 # -------------------------------------------------------------------------
 
 set -e
@@ -61,15 +61,17 @@ set -x
 
 module purge
 # need to load NCL first for some reason!
-module load NCL/6.6.2-intel-2018b
-module load NCO/4.7.9-intel-2018b
-module load Python/3.6.6-intel-2018b
-module load netcdf4-python/1.4.1-intel-2018b-Python-3.6.6
+module load NCL/6.6.2-intel-2019b
+module load NCO/4.9.3-intel-2019b
+module load Python/3.7.4-GCCcore-8.3.0
+#module load SciPy-bundle/2019.10-intel-2019b-Python-3.7.4
+module load netcdf4-python/1.5.3-intel-2019b-Python-3.7.4
 
 #####
 
 #ScratchRun=/cluster/work/users/heig/noresm/N1850frc2G_f09_tn14_gl4_SMB1_hg/run
-ScratchRun=/cluster/projects/nn9560k/heig/topo/test
+#ScratchRun=/cluster/projects/nn9560k/heig/topo/test
+ScratchRun=/cluster/work/users/heig/noresm/N1850frc2G_f09_tn14_gl4_SMB1_hg/run
 
 # Reference topography
 export ISM_Topo_File_ref=/cluster/projects/nn9560k/heig/topo/test/N1850frc2G_f09_tn14_gl4_SMB1.cism.initial_hist.0001-01-01-00000.nc

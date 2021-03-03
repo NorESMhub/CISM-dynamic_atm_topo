@@ -8,7 +8,8 @@ ifndef ($(FC))
 #machine=my_mac
 machine=betzy
 #FC = gfortran
-FC = ifort
+#FC = ifort
+FC = mpiifort
 
 #echo Setting FC to gfortran
 #echo assume mach is harmon
@@ -51,13 +52,15 @@ endif
 # IFORT
 #------------------------------------------------------------------------
 #
-ifeq ($(FC),ifort)
+ifeq ($(FC),mpiifort)
 #
   INC_NETCDF :=${EBROOTNETCDF}/include
   LIB_NETCDF :=${EBROOTNETCDF}/lib64
 
   LDFLAGS = -L$(LIB_NETCDF) -lnetcdf -lnetcdff
-  FFLAGS   := -c  -g -r8 -O -I$(INC_NETCDF)
+#  FFLAGS   := -c  -g -r8 -O -I$(INC_NETCDF)
+#  FFLAGS := -c -g -r8 -fp-model source -convert big_endian -assume byterecl -ftz -traceback -O2 -assume realloc_lhs -xHost -mkl -heap-arrays -check all -fp-stack-check -I$(INC_NETCDF)
+  FFLAGS := -c -g -r8 -fp-model source -convert big_endian -assume byterecl -ftz -traceback -O2 -assume realloc_lhs -xHost -mkl -heap-arrays  -I$(INC_NETCDF)
 
 
   ifeq ($(DEBUG),TRUE)
