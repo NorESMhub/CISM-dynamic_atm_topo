@@ -1,0 +1,1 @@
+/cluster/projects/nn9560k/heig/inputdata/CISM/CISM2_4km_2017_04_29_SCRIP_file.nc

@@ -1,0 +1,1 @@
+/cluster/projects/nn9560k/heig/inputdata/CISM/CISM2_4km_2017_08_04_lat_lon.nc

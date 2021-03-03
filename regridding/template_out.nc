@@ -1,0 +1,1 @@
+/cluster/projects/nn9560k/heig/inputdata/CISM/template_out.nc
