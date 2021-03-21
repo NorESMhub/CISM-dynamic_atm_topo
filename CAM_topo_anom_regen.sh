@@ -69,9 +69,7 @@ module load netcdf4-python/1.5.3-intel-2019b-Python-3.7.4
 
 #####
 
-#ScratchRun=/cluster/work/users/heig/noresm/N1850frc2G_f09_tn14_gl4_SMB1_hg/run
-#ScratchRun=/cluster/projects/nn9560k/heig/topo/test
-ScratchRun=/cluster/work/users/heig/noresm/N1850frc2G_f09_tn14_gl4_SMB1_hg/run
+ScratchRun=/cluster/work/users/heig/noresm/N1850frc2G_f19_tn14_gl4_SMB1_run2/run
 
 # Reference topography
 export ISM_Topo_File_ref=/cluster/projects/nn9560k/heig/topo/test/N1850frc2G_f09_tn14_gl4_SMB1.cism.initial_hist.0001-01-01-00000.nc
