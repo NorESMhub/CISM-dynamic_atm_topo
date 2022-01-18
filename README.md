@@ -1,4 +1,4 @@
-# dynamic_atm_topo
+# CISM-dynamic_atm_topo
 Dynamic topography update for NorESM2
 These scripts are based on CESM2 work provided by Kate Thayer-Calder 
 In addition, there is now an option to run in anomaly mode (not tested)
@@ -6,7 +6,7 @@ In addition, there is now an option to run in anomaly mode (not tested)
 1. Set up your case. You'll need to get to the point where a run directory is built, so at least past case.setup, but you don't need built NorESM source.
 
 2. Copy the directory dynamic_atm_topo into your case run directory
-[e.g. git clone -b noresm2-betzy  git@github.com:hgoelzer/dynamic_atm_topo.git]
+[e.g. git clone git@github.com:NorESMhub/CISM-dynamic_atm_topo.git dynamic_atm_topo]
 
 3. Build the code in dynamic_atm_topo/ . Just go into "bin_to_cube" and type "make clean" and then "make" with a fortran compiler module loaded. Should be fine. Do the same for "cube_to_target"
 
